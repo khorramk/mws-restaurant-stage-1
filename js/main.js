@@ -78,7 +78,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: '<your MAPBOX API KEY HERE>',
+    mapboxToken: 'pk.eyJ1Ijoia2hvcnJhbSIsImEiOiJjamsyZXQyeWQwcGJwM2ptdDhndnNxZ3dsIn0.cAdkhMm3Xg9_3b2obaokMA',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -209,3 +209,34 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+class getLocation{
+  constructor(){
+    this.long = long;
+    this.lat =lat;
+    this.opt = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    }
+  }
+
+  pinpoint(){
+    Navigator.geolocation.getCurrentPosition(this.getPos, this.fail, this.opt);
+  }
+
+  getPos(pos){
+    //position
+    let crd = pos.coords
+    this.long = crd.latitude;
+    this.lat = crd.longtitude
+
+  }
+
+  fail(err){
+    //failed pos
+    //showing errors;
+  }
+
+  
+
+}
