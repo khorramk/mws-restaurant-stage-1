@@ -209,34 +209,4 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
-class getLocation{
-  constructor(){
-    this.long = long;
-    this.lat =lat;
-    this.opt = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-    }
-  }
 
-  pinpoint(){
-    Navigator.geolocation.getCurrentPosition(this.getPos, this.fail, this.opt);
-  }
-
-  getPos(pos){
-    //position
-    let crd = pos.coords
-    this.long = crd.latitude;
-    this.lat = crd.longtitude
-
-  }
-
-  fail(err){
-    //failed pos
-    //showing errors;
-  }
-
-  
-
-}
