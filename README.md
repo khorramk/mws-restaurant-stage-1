@@ -32,10 +32,10 @@ Most of the code in this project has been written to the ES6 JavaScript specific
 
 # running the app on server
 
-this app is mainly supported on node.js you can use ```npm install http-server -g``` to install the server
-for more info you can check [server-package in npm](https://www.npmjs.com/package/http-server).
+1. this app is mainly supported on node.js you can use ```npm install http-server -g``` to install the server for more info you can check [server-package in npm](https://www.npmjs.com/package/http-server).
 
 
-
-
+2. also in terminal cd into the course directory and run:
+ ```http-server``` to run it
+ 3. then go to localhost from any browsers
 
